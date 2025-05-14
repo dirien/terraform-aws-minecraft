@@ -1,11 +1,7 @@
 variable "region" {
   description = "The AWS region where the resources will be created"
   type        = string
-}
-
-variable "key_pair_name" {
-  description = "The name of the existing key pair to be used for the Minecraft instance"
-  type        = string
+  default     = "eu-central-1"
 }
 
 variable "name" {
@@ -23,6 +19,7 @@ variable "instance_type" {
 variable "server_url" {
   description = "The URL from which the Minecraft server.jar file will be downloaded"
   type        = string
+  default     = "https://piston-data.mojang.com/v1/objects/e6ec2f64e6080b9b5d9b471b291c33cc7f509733/server.jar"
 }
 
 variable "java_max_memory" {
@@ -34,10 +31,11 @@ variable "java_max_memory" {
 variable "personal_ip" {
   description = "The personal IP address to allow SSH access to the Minecraft instance"
   type        = string
+  default     = "10.0.0.0"
 }
 
 variable "personal_subnet" {
   description = "The subnet mask for the personal IP, typically set to '32' for a single IP address"
   type        = string
-  default     = "32"
+  default     = "16"
 }

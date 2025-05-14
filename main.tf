@@ -8,15 +8,9 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-data "aws_key_pair" "minecraft_key_pair" {
-  key_name           = var.key_pair_name
-  include_public_key = true
-}
-
 resource "aws_instance" "minecraft_instance" {
   ami             = data.aws_ami.amazon_linux.id
   instance_type   = var.instance_type
-  key_name        = data.aws_key_pair.minecraft_key_pair.key_name
   security_groups = [aws_security_group.minecraft_sg.name]
 
   user_data = <<-EOF

@@ -3,16 +3,6 @@ output "ami_id" {
   value       = data.aws_ami.amazon_linux.id
 }
 
-output "key_pair_name" {
-  description = "The name of the key pair used for the Minecraft instance"
-  value       = data.aws_key_pair.minecraft_key_pair.key_name
-}
-
-output "key_pair_public_key" {
-  description = "The public key of the key pair used for the Minecraft instance"
-  value       = data.aws_key_pair.minecraft_key_pair.public_key
-}
-
 output "minecraft_instance_id" {
   description = "The ID of the Minecraft instance"
   value       = aws_instance.minecraft_instance.id
