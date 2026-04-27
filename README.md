@@ -29,7 +29,7 @@ optional persistent world storage, Elastic IP, and Route 53 DNS.
 ```hcl
 module "minecraft" {
   source  = "kn-lim/minecraft/aws"
-  version = "~> 2.0"
+  version = "~> 1.0"
 
   name          = "mc"
   subnet_id     = "subnet-0123456789abcdef0"

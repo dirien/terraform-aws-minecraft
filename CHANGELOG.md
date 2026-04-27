@@ -4,6 +4,17 @@ All notable changes to this project will be documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0](https://github.com/dirien/terraform-aws-minecraft/compare/v0.1.0...v1.0.0) (2026-04-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* provider block removed from module; region, personal_ip, personal_subnet variables removed; subnet_id and eula_accepted now required; resource addresses changed (moved blocks ship the rename for state).
+
+### Features
+
+* v2 module rewrite with secure defaults, examples, tests, CI ([3136ffa](https://github.com/dirien/terraform-aws-minecraft/commit/3136ffa5b1cdbe116560e67a241559a7c10e43d8))
+
 ## [Unreleased]
 
 ### Breaking changes
